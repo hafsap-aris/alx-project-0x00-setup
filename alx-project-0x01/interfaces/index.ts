@@ -9,10 +9,11 @@ export interface UserProps {
       city: string;
       zipcode: string;
       geo: {
-        lat: string;
-        lng: string;
+      lat: string;
+      lng: string;
       };
     };
+    onSubmit: (post: UserProps) => void;
     phone: string;
     website: string;
     company: {
