@@ -9,7 +9,11 @@ const Users: React.FC<{ posts: any[] }> = ({ posts }) => {
       <p>This is the users page.</p>
       <div>
         {posts.map((post) => (
-          <UserCard key={post.id} user={post} />
+          <UserCard 
+            key={post.id}
+            name={post.name}
+            address={post.address}
+            company={post.company} id={0} username={""} email={""} phone={""} website={""}          />
         ))}
       </div>
     </div>

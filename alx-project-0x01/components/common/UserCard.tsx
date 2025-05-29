@@ -1,16 +1,18 @@
 import { UserProps } from '@/interfaces';
 import React from 'react';
 
-// File: /Users/yohannesm/Desktop/ALX/FE/alx-project-0x01-setup/alx-project-0x01/components/common/UserCard.tsx
 
 
-
-const UserCard: React.FC<UserProps> = ({ name, avatarUrl, bio }) => {
+const UserCard: React.FC<UserProps> = ({ name, address, company }) => {
     return (
-        <div style={styles.card}>
-            <img src={avatarUrl} alt={`${name}'s avatar`} style={styles.avatar} />
+        <div style={styles.card as React.CSSProperties}>
             <h2 style={styles.name}>{name}</h2>
-            <p style={styles.bio}>{bio}</p>
+            <p style={styles.bio}>
+                {company.name} - {company.catchPhrase}
+            </p>
+            <p style={styles.bio}>
+                {address.street}, {address.city}
+            </p>
         </div>
     );
 };
