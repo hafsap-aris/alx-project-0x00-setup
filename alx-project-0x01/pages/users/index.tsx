@@ -1,15 +1,20 @@
+import UserCard from "@/components/common/UserCard";
 import Header from "@/components/layout/Header";
 
-const Users = () => {
+const Users: React.FC<{ posts: any[] }> = ({ posts }) => {
   return (
     <div>
-            <Header />
-
+      <Header />
       <h1>Users</h1>
       <p>This is the users page.</p>
+      <div>
+        {posts.map((post) => (
+          <UserCard key={post.id} user={post} />
+        ))}
+      </div>
     </div>
   );
-}
+};
 
 export async function getStaticProps() {
   const response = await fetch("https://jsonplaceholder.typicode.com/users")
