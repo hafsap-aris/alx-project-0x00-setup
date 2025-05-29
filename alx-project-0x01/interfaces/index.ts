@@ -1,4 +1,4 @@
-export interface UserProps {
+export interface PostProps {
     id: number;
     name: string;
     username: string;
