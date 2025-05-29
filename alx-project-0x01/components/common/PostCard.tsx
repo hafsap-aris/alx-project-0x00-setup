@@ -1,4 +1,4 @@
-const PostCard=()=>{
+const PostCard:React.FC=()=>{
     return (
         <div className="bg-white shadow-md rounded-lg p-6">
             <h2 className="text-xl font-semibold mb-2">Post Title</h2>
