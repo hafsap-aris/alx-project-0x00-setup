@@ -22,6 +22,7 @@ export interface UserProps {
       bs: string;
     };
   }
+["styles:string"]
   
   export interface PostProps {
     userId: number;
